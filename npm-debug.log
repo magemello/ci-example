@@ -1,0 +1,99 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/6.2.2/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'login' ]
+2 info using npm@3.10.10
+3 info using node@v7.2.1
+4 verbose adduser before first PUT { _id: 'org.couchdb.user:mromano',
+4 verbose adduser   name: 'mromano',
+4 verbose adduser   password: 'XXXXX',
+4 verbose adduser   email: 'test@example.com',
+4 verbose adduser   type: 'user',
+4 verbose adduser   roles: [],
+4 verbose adduser   date: '2017-11-25T09:36:02.043Z' }
+5 verbose request uri http://localhost:4873/-/user/org.couchdb.user:mromano
+6 verbose request new user, so can't send auth
+7 info attempt registry request try #1 at 9:36:02 AM
+8 verbose request id a630a78039ed7e55
+9 http request PUT http://localhost:4873/-/user/org.couchdb.user:mromano
+10 http 409 http://localhost:4873/-/user/org.couchdb.user:mromano
+11 verbose headers { 'x-powered-by': 'verdaccio/2.1.0',
+11 verbose headers   'content-type': 'application/json; charset=utf-8',
+11 verbose headers   'content-length': '42',
+11 verbose headers   etag: 'W/"2a-3mc5CqJ044W4swo4J93qOg"',
+11 verbose headers   vary: 'Accept-Encoding',
+11 verbose headers   'x-status-cat': 'http://flic.kr/p/aV6jzz',
+11 verbose headers   date: 'Sat, 25 Nov 2017 09:36:02 GMT',
+11 verbose headers   connection: 'keep-alive' }
+12 verbose request invalidating /Users/magemello/.npm/localhost_4873/-/user/org.couchdb.user_3Amromano on PUT
+13 verbose adduser update existing user
+14 verbose request uri http://localhost:4873/-/user/org.couchdb.user:mromano?write=true
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 9:36:02 AM
+17 http request GET http://localhost:4873/-/user/org.couchdb.user:mromano?write=true
+18 http 200 http://localhost:4873/-/user/org.couchdb.user:mromano?write=true
+19 verbose headers { 'x-powered-by': 'verdaccio/2.1.0',
+19 verbose headers   'content-type': 'application/json; charset=utf-8',
+19 verbose headers   etag: '"7c1042e2e8659c3817daa529c01a7f4e"',
+19 verbose headers   'content-length': '53',
+19 verbose headers   vary: 'Accept-Encoding',
+19 verbose headers   'x-status-cat': 'http://flic.kr/p/aVuVsF',
+19 verbose headers   date: 'Sat, 25 Nov 2017 09:36:02 GMT',
+19 verbose headers   connection: 'keep-alive' }
+20 verbose adduser userobj { _id: 'org.couchdb.user:mromano',
+20 verbose adduser   name: 'mromano',
+20 verbose adduser   password: 'XXXXX',
+20 verbose adduser   email: 'test@example.com',
+20 verbose adduser   type: 'user',
+20 verbose adduser   roles: [],
+20 verbose adduser   date: '2017-11-25T09:36:02.043Z' }
+21 verbose request uri http://localhost:4873/-/user/org.couchdb.user:mromano/-rev/undefined
+22 verbose request updating existing user; sending authorization
+23 info attempt registry request try #1 at 9:36:02 AM
+24 http request PUT http://localhost:4873/-/user/org.couchdb.user:mromano/-rev/undefined
+25 http 409 http://localhost:4873/-/user/org.couchdb.user:mromano/-rev/undefined
+26 verbose headers { 'x-powered-by': 'verdaccio/2.1.0',
+26 verbose headers   'content-type': 'application/json; charset=utf-8',
+26 verbose headers   'content-length': '42',
+26 verbose headers   etag: 'W/"2a-3mc5CqJ044W4swo4J93qOg"',
+26 verbose headers   vary: 'Accept-Encoding',
+26 verbose headers   'x-status-cat': 'http://flic.kr/p/aV6jzz',
+26 verbose headers   date: 'Sat, 25 Nov 2017 09:36:02 GMT',
+26 verbose headers   connection: 'keep-alive' }
+27 verbose request invalidating /Users/magemello/.npm/localhost_4873/-/user/org.couchdb.user_3Amromano on PUT
+28 verbose adduser back [ { Error: this user already exists : -/user/org.couchdb.user:mromano/-rev/undefined
+28 verbose adduser       at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+28 verbose adduser       at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+28 verbose adduser       at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+28 verbose adduser       at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+28 verbose adduser       at emitTwo (events.js:106:13)
+28 verbose adduser       at Request.emit (events.js:191:7)
+28 verbose adduser       at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+28 verbose adduser       at emitOne (events.js:96:13)
+28 verbose adduser       at Request.emit (events.js:188:7)
+28 verbose adduser       at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12) statusCode: 409, code: 'E409' },
+28 verbose adduser   { error: 'this user already exists',
+28 verbose adduser     _etag: 'W/"2a-3mc5CqJ044W4swo4J93qOg"' },
+28 verbose adduser   '{"error":"this user already exists"}' ]
+29 verbose stack Error: this user already exists : -/user/org.couchdb.user:mromano/-rev/undefined
+29 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+29 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+29 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+29 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+29 verbose stack     at emitTwo (events.js:106:13)
+29 verbose stack     at Request.emit (events.js:191:7)
+29 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+29 verbose stack     at emitOne (events.js:96:13)
+29 verbose stack     at Request.emit (events.js:188:7)
+29 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+30 verbose statusCode 409
+31 verbose cwd /Users/magemello/dev/frontend
+32 error Darwin 14.3.0
+33 error argv "/usr/local/Cellar/node/6.2.2/bin/node" "/usr/local/bin/npm" "login"
+34 error node v7.2.1
+35 error npm  v3.10.10
+36 error code E409
+37 error this user already exists : -/user/org.couchdb.user:mromano/-rev/undefined
+38 error If you need help, you may report this error at:
+38 error     <https://github.com/npm/npm/issues>
+39 verbose exit [ 1, true ]
